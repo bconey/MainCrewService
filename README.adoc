@@ -1,0 +1,55 @@
+// ==================================================================================
+// Running the application
+// ==================================================================================
+
+== Running the application
+
+Access at http://HOST:PORT/MainCrewService
+
+MainCrewService works in conjunction with AddCrewService, DeleteCrewService and UpdateCrewService.
+
+For MainCrewService, you'll need to set your specific values in the bootstrap.properties like
+[source,role="no_copy"]
+mongo.hostname=avl-mongo-1.fyre.ibm.com
+mongo.port=27017
+mongo.dbname=crewdb
+addcrewservice.url=https://HOST2.fyre.ibm.com:9444/AddCrewService
+deletecrewservice.url=https://HOST3.fyre.ibm.com:9445/DeleteCrewService
+updatecrewservice.url=https://HOST4.fyre.ibm.com:9446/UpdateCrewService
+
+
+== Utilizing OpenAPI UI
+
+[role='command']
+
+Go to the http://HOST:PORT/openapi/ui/[^] URL to see the OpenAPI user interface (UI) that provides API documentation and a client to test the API endpoints that you create after you see a message similar to the following example:
+
+[source,role="no_copy"]
+----
+CWWKZ0001I: Application MainCrewService started in 5.715 seconds.
+----
+
+**Try the Retrieve operation**
+
+From the OpenAPI UI, test the read operation at the `GET /api/crew` endpoint. This request gets all crew member documents from the collection.
+
+You'll receive a response that contains an array of all the members in your crew. 
+[role="no_copy"]
+```
+[
+  {
+    "_id": {
+      "$oid": "<<ID>>"
+    },
+    "Name": "Member1",
+    "Rank": "Officer",
+    "CrewID": "1"
+  }
+]
+```
+
+
+
+
+
+
