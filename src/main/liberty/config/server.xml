@@ -1,8 +1,6 @@
 <server description="MainCrewServiceServer">
     <featureManager>
         <!-- <feature>passwordUtilities-1.1</feature> -->
-        <feature>jakartaee-9.1</feature>
-        <!--
         <feature>cdi-4.0</feature>
         <feature>ssl-1.0</feature>
         <feature>mpConfig-3.0</feature>
@@ -10,7 +8,6 @@
         <feature>restfulWS-3.1</feature>
         <feature>jsonb-3.0</feature>
         <feature>mpOpenAPI-3.1</feature> 
-        -->
     </featureManager>
 
     <variable name="default.http.port" defaultValue="9080"/>
